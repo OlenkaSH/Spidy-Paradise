@@ -5,12 +5,16 @@ class Game {
 		this.background = new Background()
 		this.obstacles = []
 		this.score = 0
+		//this.song
+		//this.loadSound
+
+		
 	}
 
 	constructor() {
 		this.backgroundImages
 		this.flyImage 
-		//this.song
+		
 	}
 
 	preload() {
@@ -20,9 +24,11 @@ class Game {
 			{ src: loadImage('assets/background/1.png'), x: 0, speed: 0 }
 			
 		]
-		//this.song = loadSound('assets/onuka.mp3')
+		
 		this.playerImage = loadImage('assets/player/spidy.png')
 		this.flyImage = loadImage('assets/fly/fly.png')
+
+		//this.song = loadSound('assets/remix.mp3')
 	}
 
 	draw() {
@@ -57,13 +63,5 @@ class Game {
 
 		
 	}
-	/*mousePressed() {
-		if (song.isPlaying()) {
-			// .isPlaying() returns a boolean
-			song.stop();
-			this.background;
-		  } else {
-			song.play();
-			this.background;
-	}*/
+	
 }

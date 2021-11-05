@@ -23,7 +23,18 @@ function keyPressed() {
 	if (keyCode === 37) {
 		game.player.toLeft()
 	}
-	
+
 }
-//function mousePressed() {}
+
+function mousePressed() {
+	if (song.isPlaying()) {
+		// .isPlaying() returns a boolean
+		song.stop();
+		this.background;
+	} else {
+		song.play();
+		this.background;
+	}
+}
+
 
