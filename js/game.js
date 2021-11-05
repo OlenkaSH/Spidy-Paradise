@@ -4,6 +4,7 @@ class Game {
 		this.player = new Player()
 		this.background = new Background()
 		this.obstacles = []
+		this.score = 0
 	}
 
 	constructor() {
@@ -31,6 +32,7 @@ class Game {
 		this.background.draw()
 		this.player.draw()
 		
+		
 		//add flys
 		if (frameCount % 50 === 0) {
 			this.obstacles.push(new Obstacle(this.flyImage))
@@ -47,8 +49,13 @@ class Game {
 				return false
 			} else {
 				return true
-			}
+			} 
+			
 		})
+		
+
+
+		
 	}
 	/*mousePressed() {
 		if (song.isPlaying()) {

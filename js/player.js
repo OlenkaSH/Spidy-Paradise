@@ -23,6 +23,7 @@ class Player {
 		image(game.playerImage, this.x, this.y, this.width, this.height)
 	}
 
+
 	jump() {
 		this.velocity = - 10
 
@@ -37,7 +38,6 @@ class Player {
   	//spidy moves to the left
     this.x -= 20;
   	}
-
 
   }
 

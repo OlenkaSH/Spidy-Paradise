@@ -5,6 +5,7 @@ class Obstacle {
 		this.y = (Math.random() * height) / 1.2      
 		this.width = 50
 		this.height = 50
+		this.score = 0;   
 	}
 
 	collision(playerInfo) {
@@ -15,20 +16,25 @@ class Obstacle {
 		// get the middle of the obstacle
 		const obstacleX = this.x + this.width / 2.5
 		const obstacleY = this.y + this.height / 2.5
+		this.score++;
 		// measure the distance between obstacle and player
 		if (dist(obstacleX, obstacleY, playerX, playerY) > 35) {
 			// this is not a collision
 			return false
 		} else {
-			// 
-			// game.player.score += 10
-			// console.log(game.player.score)
-			return true
+		
+			game.player.score += 1
+			console.log(game.player.score)
+			return true 
 		}
 	}
 
 	draw() {
 		this.x--
 		image(this.image, this.x, this.y, this.width, this.height)
-	}
+			
+		game.player.score;
+			text("Score: " + game.player.score, 30, 30);
+
+		}
 }
