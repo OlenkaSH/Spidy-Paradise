@@ -3,6 +3,7 @@ const game = new Game();
 function preload() {
 	game.preload()
 }
+
 function setup() {
 	createCanvas(800, 600)
 	game.setup()
@@ -24,3 +25,5 @@ function keyPressed() {
 	}
 	
 }
+//function mousePressed() {}
+

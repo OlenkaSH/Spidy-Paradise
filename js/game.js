@@ -8,7 +8,8 @@ class Game {
 
 	constructor() {
 		this.backgroundImages
-		this.flyImage
+		this.flyImage 
+		//this.song
 	}
 
 	preload() {
@@ -18,6 +19,7 @@ class Game {
 			{ src: loadImage('assets/background/1.png'), x: 0, speed: 0 }
 			
 		]
+		//this.song = loadSound('assets/onuka.mp3')
 		this.playerImage = loadImage('assets/player/spidy.png')
 		this.flyImage = loadImage('assets/fly/fly.png')
 	}
@@ -48,4 +50,13 @@ class Game {
 			}
 		})
 	}
+	/*mousePressed() {
+		if (song.isPlaying()) {
+			// .isPlaying() returns a boolean
+			song.stop();
+			this.background;
+		  } else {
+			song.play();
+			this.background;
+	}*/
 }
